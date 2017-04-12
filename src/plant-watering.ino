@@ -1,19 +1,16 @@
-unsigned long interval  = 60 * 1000 * 5;
-unsigned long duration = 2 * 1000;
+unsigned long interval  = 1000 * 60 * 60 * 12;
+unsigned long duration = 1000 * 15;
 
 void trigger() {
-  digitalWrite(10, LOW);
-  digitalWrite(13, HIGH);
-
+  digitalWrite(5, LOW);
   delay(duration);
-
-  digitalWrite(10, HIGH);
-  digitalWrite(13, LOW);
+  digitalWrite(5, HIGH);
+  
 }
 
 void setup() {
-  pinMode(10, OUTPUT);
-  pinMode(13, OUTPUT);
+  pinMode(5, OUTPUT);
+  digitalWrite(5, LOW);
 }
 
 void loop() {
